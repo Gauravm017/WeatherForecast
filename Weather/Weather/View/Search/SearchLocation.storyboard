@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Search LocationVC-->
+        <scene sceneID="hig-o1-d8X">
+            <objects>
+                <viewController storyboardIdentifier="SearchLocationVC" id="HzD-3U-VDv" customClass="SearchLocationVC" customModule="Weather" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Td8-cm-YuR">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="eTh-vi-zQ8">
+                                <rect key="frame" x="0.0" y="144" width="414" height="718"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="separatorColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="x2t-Aa-Pj0">
+                                <rect key="frame" x="0.0" y="44" width="414" height="100"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="eGb-m1-vf2">
+                                        <rect key="frame" x="8" y="8" width="398" height="84"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter city, zip code, or airport location" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mVm-ab-r4i">
+                                                <rect key="frame" x="0.0" y="0.0" width="398" height="18"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <searchBar contentMode="redraw" searchBarStyle="minimal" showsCancelButton="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Tiv-gd-yVB">
+                                                <rect key="frame" x="0.0" y="28" width="398" height="56"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="barTintColor" name="BackGroundColor"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="searchField.textColor">
+                                                        <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </searchBar>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" name="BackGroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="eGb-m1-vf2" firstAttribute="leading" secondItem="x2t-Aa-Pj0" secondAttribute="leading" constant="8" id="GJ0-qY-h1j"/>
+                                    <constraint firstItem="eGb-m1-vf2" firstAttribute="top" secondItem="x2t-Aa-Pj0" secondAttribute="top" constant="8" id="H4w-eh-NsF"/>
+                                    <constraint firstAttribute="height" constant="100" id="jlG-mO-fJL"/>
+                                    <constraint firstAttribute="bottom" secondItem="eGb-m1-vf2" secondAttribute="bottom" constant="8" id="ptC-2L-0Sr"/>
+                                    <constraint firstAttribute="trailing" secondItem="eGb-m1-vf2" secondAttribute="trailing" constant="8" id="wc0-RG-SgL"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="gt6-eG-QTS"/>
+                        <color key="backgroundColor" name="BackGroundColor"/>
+                        <constraints>
+                            <constraint firstItem="eTh-vi-zQ8" firstAttribute="leading" secondItem="gt6-eG-QTS" secondAttribute="leading" id="0dr-gS-J1b"/>
+                            <constraint firstItem="x2t-Aa-Pj0" firstAttribute="top" secondItem="gt6-eG-QTS" secondAttribute="top" id="3kn-s8-bUo"/>
+                            <constraint firstItem="gt6-eG-QTS" firstAttribute="trailing" secondItem="eTh-vi-zQ8" secondAttribute="trailing" id="6my-A0-VVL"/>
+                            <constraint firstItem="x2t-Aa-Pj0" firstAttribute="leading" secondItem="gt6-eG-QTS" secondAttribute="leading" id="8Jq-UV-UP2"/>
+                            <constraint firstItem="gt6-eG-QTS" firstAttribute="bottom" secondItem="eTh-vi-zQ8" secondAttribute="bottom" id="GBI-JY-ejf"/>
+                            <constraint firstItem="x2t-Aa-Pj0" firstAttribute="trailing" secondItem="gt6-eG-QTS" secondAttribute="trailing" id="X2S-lA-z7R"/>
+                            <constraint firstItem="eTh-vi-zQ8" firstAttribute="top" secondItem="x2t-Aa-Pj0" secondAttribute="bottom" id="imb-yC-znY"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="searchBar" destination="Tiv-gd-yVB" id="S7j-B4-VCA"/>
+                        <outlet property="tableView" destination="eTh-vi-zQ8" id="sD5-b8-xx3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CIr-cD-Url" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1914" y="80"/>
+        </scene>
+    </scenes>
+    <resources>
+        <namedColor name="BackGroundColor">
+            <color red="0.0" green="0.73530912399291992" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

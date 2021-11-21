@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="zPY-Pv-Of0">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Weather ListVC-->
+        <scene sceneID="SEb-cB-4JE">
+            <objects>
+                <viewController storyboardIdentifier="WeatherListVC" id="zPY-Pv-Of0" customClass="WeatherListVC" customModule="Weather" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="wnJ-Vg-gT1">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Weather Forcast" textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="alo-ZJ-pc1" userLabel="Title Label">
+                                <rect key="frame" x="0.0" y="44" width="414" height="33.5"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="kjF-ij-tWP">
+                                <rect key="frame" x="0.0" y="77.5" width="414" height="784.5"/>
+                                <color key="backgroundColor" name="BackGroundColor"/>
+                                <color key="separatorColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <view key="tableFooterView" contentMode="scaleToFill" id="ePi-1y-9uS">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="backgroundColor" name="BackGroundColor"/>
+                                </view>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="G2b-sj-HKt"/>
+                        <color key="backgroundColor" name="BackGroundColor"/>
+                        <constraints>
+                            <constraint firstItem="G2b-sj-HKt" firstAttribute="bottom" secondItem="kjF-ij-tWP" secondAttribute="bottom" id="Ptm-Wc-ElA"/>
+                            <constraint firstItem="alo-ZJ-pc1" firstAttribute="top" secondItem="G2b-sj-HKt" secondAttribute="top" id="WPb-tj-rSf"/>
+                            <constraint firstItem="kjF-ij-tWP" firstAttribute="leading" secondItem="G2b-sj-HKt" secondAttribute="leading" id="Ylo-yH-MpH"/>
+                            <constraint firstItem="G2b-sj-HKt" firstAttribute="trailing" secondItem="alo-ZJ-pc1" secondAttribute="trailing" id="eeE-AM-tgQ"/>
+                            <constraint firstItem="G2b-sj-HKt" firstAttribute="trailing" secondItem="kjF-ij-tWP" secondAttribute="trailing" id="hkm-Hk-pUi"/>
+                            <constraint firstItem="kjF-ij-tWP" firstAttribute="top" secondItem="alo-ZJ-pc1" secondAttribute="bottom" id="qP1-yw-r5X"/>
+                            <constraint firstItem="alo-ZJ-pc1" firstAttribute="leading" secondItem="G2b-sj-HKt" secondAttribute="leading" id="tYU-lM-VAR"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="gdd-qe-BqG"/>
+                    <connections>
+                        <outlet property="tableView" destination="kjF-ij-tWP" id="8ye-Q6-Bdv"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gyb-Af-Ldq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1268.1159420289855" y="79.6875"/>
+        </scene>
+    </scenes>
+    <resources>
+        <namedColor name="BackGroundColor">
+            <color red="0.0" green="0.73530912399291992" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

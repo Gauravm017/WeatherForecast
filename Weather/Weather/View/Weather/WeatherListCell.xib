@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="WeatherListCell" rowHeight="93" id="PS7-4Z-3V8" customClass="WeatherListCell" customModule="Weather" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="93"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="PS7-4Z-3V8" id="V0d-cE-ovV">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="93"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="okb-zQ-lbZ">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="93"/>
+                        <color key="backgroundColor" name="BackGroundColor"/>
+                    </imageView>
+                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="zL6-wb-eXh">
+                        <rect key="frame" x="16" y="16" width="288" height="61"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="yzZ-o7-Nnk">
+                                <rect key="frame" x="0.0" y="0.0" width="62.5" height="61"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aJ3-bt-sTe">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="15"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="highlightedColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m5U-wE-fjo">
+                                        <rect key="frame" x="0.0" y="58" width="62.5" height="3"/>
+                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-SemiBold" family="Apple SD Gothic Neo" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="highlightedColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tyz-3s-WyA">
+                                <rect key="frame" x="238" y="0.0" width="50" height="61"/>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="30"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="highlightedColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </label>
+                        </subviews>
+                    </stackView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="zL6-wb-eXh" firstAttribute="leading" secondItem="V0d-cE-ovV" secondAttribute="leading" constant="16" id="2Mx-YL-cfc"/>
+                    <constraint firstItem="zL6-wb-eXh" firstAttribute="top" secondItem="V0d-cE-ovV" secondAttribute="top" constant="16" id="EOe-6e-Ib5"/>
+                    <constraint firstAttribute="bottom" secondItem="okb-zQ-lbZ" secondAttribute="bottom" id="GUT-r8-9eK"/>
+                    <constraint firstAttribute="trailing" secondItem="zL6-wb-eXh" secondAttribute="trailing" constant="16" id="Szk-mv-sQ8"/>
+                    <constraint firstItem="okb-zQ-lbZ" firstAttribute="top" secondItem="V0d-cE-ovV" secondAttribute="top" id="dQD-ff-N5O"/>
+                    <constraint firstAttribute="trailing" secondItem="okb-zQ-lbZ" secondAttribute="trailing" id="q5h-HC-SBe"/>
+                    <constraint firstItem="okb-zQ-lbZ" firstAttribute="leading" secondItem="V0d-cE-ovV" secondAttribute="leading" id="qgf-9w-u9o"/>
+                    <constraint firstAttribute="bottom" secondItem="zL6-wb-eXh" secondAttribute="bottom" constant="16" id="tqF-kX-6Ru"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="MQ0-6L-ums"/>
+            <connections>
+                <outlet property="cityNameLabel" destination="m5U-wE-fjo" id="x6p-C4-mrZ"/>
+                <outlet property="temperatureLabel" destination="tyz-3s-WyA" id="szp-7l-VhP"/>
+                <outlet property="timeLabel" destination="aJ3-bt-sTe" id="C9Y-zQ-YWS"/>
+            </connections>
+            <point key="canvasLocation" x="521.73913043478262" y="127.56696428571428"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <namedColor name="BackGroundColor">
+            <color red="0.0" green="0.73530912399291992" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
